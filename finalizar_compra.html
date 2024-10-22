@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmacia Pura Vida - Finalizar Compra</title>
+    <title>Farmacia Pura Vida - Carrito</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,18 +14,42 @@
             <a href="productos.html">Productos</a>
             <a href="sobre_nosotros.html">Sobre Nosotros</a>
             <a href="contacto.html">Contacto</a>
-            <a href="finalizar_compra.html">Finalizar Compra</a>
+            <a href="finalizar_compra.html">Carrito</a>
         </nav>
     </header>
 
     <main>
-        <h2>Finalizar Compra</h2>
+        <h2>Carrito</h2>
         <p>Aquí podrás revisar los productos en tu carrito y realizar el pago.</p>
-        <button>Proceder al Pago</button>
+        
+        <!-- Tabla para mostrar los productos del carrito -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+
+        <div class="cart-total">
+            <strong>Total a pagar: </strong><span id="total-amount">$0.00</span>
+        </div>
+
+        <button id="checkout-button">Proceder al Pago</button>
     </main>
 
     <footer>
         <p>&copy; 2024 Farmacia Pura Vida</p>
     </footer>
+
+    <script src="cart.js"></script>
 </body>
 </html>
+

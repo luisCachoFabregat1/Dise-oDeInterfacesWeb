@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmacia Pura Vida - Inicio</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
+
 <body>
     <header>
+        <aside>
+            <model-viewer src="bottle/scene.gltf" auto-rotate camera-controls ar ios-src></model-viewer>
+        </aside>
         <h1>Farmacia Pura Vida</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="productos.html">Productos</a>
             <a href="sobre_nosotros.html">Sobre Nosotros</a>
             <a href="contacto.html">Contacto</a>
-            <a href="finalizar_compra.html">Finalizar Compra</a>
+            <a href="finalizar_compra.html">Carrito</a>
+            <a href="login_register.html">Iniciar Sesión</a> 
         </nav>
     </header>
 
-    <main>
-        <h2>Bienvenidos a nuestra farmacia</h2>
-        <p>Encuentra los mejores productos de salud y bienestar en un solo lugar.</p>
+    <main class="home-page">
+        <h2>Bienvenidos a Farmacia Pura Vida</h2>
+        <p>En Farmacia Pura Vida nos dedicamos a ofrecerte los mejores productos para el cuidado de tu salud y
+            bienestar. Contamos con una amplia gama de artículos que van desde productos de higiene personal, vitaminas,
+            suplementos, hasta tratamientos dermatológicos y mucho más.</p>
+
+        <p>Nuestra misión es brindarte productos de alta calidad a precios accesibles, asegurando siempre la mejor
+            atención al cliente. Ya sea que estés buscando un artículo para el cuidado diario, un remedio para el alivio
+            de algún malestar o simplemente mejorar tu estilo de vida, ¡tenemos lo que necesitas!</p>
+
+        <h3>¿Por qué elegirnos?</h3>
+        <ul>
+            <li><strong>Productos de Calidad:</strong> Trabajamos solo con las mejores marcas para garantizar tu
+                satisfacción.</li>
+            <li><strong>Precios Competitivos:</strong> Creemos que el bienestar debe estar al alcance de todos, por eso
+                mantenemos nuestros precios justos.</li>
+            <li><strong>Asesoramiento Profesional:</strong> Nuestro equipo está siempre dispuesto a brindarte la mejor
+                orientación en el cuidado de tu salud.</li>
+            <li><strong>Envíos Rápidos:</strong> Realizamos envíos a todo el país para que recibas tus productos sin
+                demora.</li>
+        </ul>
+
+        <p>Visítanos regularmente para conocer nuestras promociones especiales y nuevos productos. En Farmacia Pura
+            Vida, ¡tu salud es nuestra prioridad!</p>
     </main>
 
     <footer>
         <p>&copy; 2024 Farmacia Pura Vida</p>
     </footer>
+
 </body>
+
 </html>

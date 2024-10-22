@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia Pura Vida - Registro e Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleForm(option) {
+            const registerForm = document.getElementById('register-form');
+            const loginForm = document.getElementById('login-form');
+
+            if (option === 'register') {
+                registerForm.style.display = 'block';
+                loginForm.style.display = 'none';
+            } else {
+                registerForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        }
+
+        function submitLoginForm(event) {
+            event.preventDefault();
+            const dni = document.getElementById('dni').value;
+            const nombre = document.getElementById('nombre').value;
+            const loginTime = new Date().toLocaleTimeString();
+
+            alert(`Iniciaste sesión a las ${loginTime} con el nombre ${nombre} y el DNI ${dni}.`);
+        }
+
+        function submitRegisterForm(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre_registro').value;
+            const apellidos = document.getElementById('apellidos').value;
+            const telefono = document.getElementById('telefono').value;
+            const direccion = document.getElementById('direccion').value;
+            const dni = document.getElementById('dni_registro').value;
+
+            alert(`Cuenta creada para ${nombre} ${apellidos} con DNI ${dni}.`);
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Farmacia Pura Vida</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="productos.html">Productos</a>
+            <a href="sobre_nosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="finalizar_compra.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Inicia Sesión o Regístrate</h2>
+        <div>
+            <button onclick="toggleForm('login')">Ya tengo cuenta</button>
+            <button onclick="toggleForm('register')">Crear una cuenta</button>
+        </div>
+
+        <form id="login-form" style="display: none;" onsubmit="submitLoginForm(event)">
+            <h3>Iniciar Sesión</h3>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <form id="register-form" style="display: none;" onsubmit="submitRegisterForm(event)">
+            <h3>Crear una Cuenta</h3>
+            <label for="nombre_registro">Nombre:</label>
+            <input type="text" id="nombre_registro" name="nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="direccion">Dirección de Vivienda:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="dni_registro">DNI:</label>
+            <input type="text" id="dni_registro" name="dni" required>
+
+            <button type="submit">Registrar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Farmacia Pura Vida</p>
+    </footer>
+
+</body>
+
+</html>

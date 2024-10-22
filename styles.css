@@ -31,12 +31,45 @@ footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
+    /* Reducir el padding */
+    font-size: 0.8rem;
+    /* Reducir tamaño de texto si es necesario */
     position: fixed;
     width: 100%;
     bottom: 0;
 }
+ /* Estilos para la tabla */
+ table {
+    width: 50%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: left;
+}
 
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #d4edda; /* Verde claro */
+    color: #333;
+}
+
+td {
+    background-color: #f4f4f2; /* Blanco arenisca */
+    color: #333;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+    color: #2c3e50;
+}
 /* Estilos para la página de productos */
 .productos-page main {
     padding: 20px;
@@ -44,13 +77,14 @@ footer {
 }
 
 .productos-page h2 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .productos-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     justify-items: center;
 }
 
@@ -58,22 +92,23 @@ footer {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
-    width: 200px;
+    padding: 30px;
+    width: 250px;
     text-align: center;
 }
 
 .producto h3 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
 .producto p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .producto a {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 15px 20px;
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
@@ -84,52 +119,106 @@ footer {
     background-color: #45a049;
 }
 
-/* Estilos para la página de contacto */
-.contacto-page main {
+/* Estilos para la página principal (Home) */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Asegura que ocupe toda la altura de la ventana */
     text-align: center;
+    padding: 40px;
+}
+
+.home-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home-page p {
+    font-size: 1.2em;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.home-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.home-page ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los íconos de contacto */
+.contact-options {
+    margin-top: 20px;
+}
+
+.contact-options a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.contact-options img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contact-options span {
+    vertical-align: middle;
+    font-size: 1.1em;
+}
+/*Pagina de contacto*/
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.contacto-page main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 300px;
+    width: 250px;
+    gap: 10px;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, textarea {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
+input[type="text"],
+input[type="email"],
 textarea {
-    resize: vertical;
-    height: 100px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
+    padding: 8px 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 10px;
-    width: 100px;
 }
 
 input[type="submit"]:hover {

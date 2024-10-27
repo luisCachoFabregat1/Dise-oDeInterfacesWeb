@@ -1,0 +1,67 @@
+// Variables para navegación
+$nav-bg-color: #2c3e50;
+$nav-link-color: #ffffff;
+$nav-link-hover-color: #f1c40f;
+$nav-padding: 10px;
+
+// Mixin de navegación
+@mixin navigation($bg-color: $nav-bg-color, $link-color: $nav-link-color, $hover-color: $nav-link-hover-color, $padding: $nav-padding) {
+    background-color: $bg-color;
+    padding: $padding;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+        padding: 0 10px;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+
+// Aplicación de estilos en la clase de navegación
+.navbar {
+    @include navigation();
+}
+
+// Variables de formulario
+$form-bg-color: #ecf0f1;
+$form-border-color: #bdc3c7;
+$form-text-color: #333;
+$form-padding: 15px;
+$form-radius: 5px;
+
+// Mixin de formulario
+@mixin form-style($bg-color: $form-bg-color, $border-color: $form-border-color, $text-color: $form-text-color, $padding: $form-padding, $radius: $form-radius) {
+    background-color: $bg-color;
+    padding: $padding;
+    border-radius: $radius;
+    color: $text-color;
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $border-color;
+        border-radius: $radius;
+    }
+
+    input[type="submit"] {
+        background-color: $border-color;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($border-color, 10%);
+        }
+    }
+}
+
+// Aplicación de estilos en la clase de formulario
+.form-container {
+    @include form-style();
+}
